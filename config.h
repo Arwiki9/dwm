@@ -85,19 +85,16 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]  = { "firefox", NULL };
 
-static const char *upvol[]   = { "/home/david/scripts/vol-up.sh",  NULL };
-static const char *downvol[] = { "/home/david/scripts/vol-down.sh",  NULL };
-static const char *mutevol[] = { "/home/david/scripts/vol-toggle.sh",  NULL };
+static const char *upvol[]   = { "/home/xrz/scripts/vol-up.sh",  NULL };
+static const char *downvol[] = { "/home/xrz/scripts/vol-down.sh",  NULL };
+static const char *mutevol[] = { "/home/xrz/scripts/vol-toggle.sh",  NULL };
 
-static const char *wpcmd[]  = { "/home/david/scripts/wp-change.sh", NULL };
-static const char *sktogglecmd[]  = { "/home/david/scripts/sck-tog.sh", NULL };
+static const char *wpcmd[]  = { "/home/xrz/scripts/wp-change.sh", NULL };
+static const char *sktogglecmd[]  = { "/home/xrz/scripts/sck-tog.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 
-static const char *setcolemakcmd[]  = { "/home/david/scripts/setxmodmap-colemak.sh", NULL };
-static const char *setqwertycmd[]  = { "/home/david/scripts/setxmodmap-qwerty.sh", NULL };
-
-static const char *suspendcmd[]  = { "/home/david/scripts/suspend.sh", NULL };
+static const char *suspendcmd[]  = { "/home/xrz/scripts/suspend.sh", NULL };
 
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 
@@ -106,8 +103,6 @@ static Key keys[] = {
 	{ MODKEY,              XK_d,                    spawn,          {.v = dmenucmd } },
 	{ MODKEY,              XK_Return,               spawn,          {.v = termcmd } },
 	{ MODKEY,              XK_c,                    spawn,          {.v = browsercmd } },
-	{ MODKEY|ShiftMask,    XK_w,                    spawn,          {.v = setqwertycmd } },
-	{ MODKEY|ShiftMask,    XK_m,                    spawn,          {.v = setcolemakcmd } },
 	{ MODKEY|ShiftMask,    XK_p,                    spawn,          {.v = suspendcmd } },
 	{ MODKEY|ControlMask,  XK_s,                    spawn,          {.v = sktogglecmd } },
 	{ 0,                   XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
@@ -118,6 +113,8 @@ static Key keys[] = {
 	{ MODKEY,              XK_bracketright,         spawn,          {.v = upvol   } },
 	{ MODKEY,              XK_b,                    spawn,          {.v = wpcmd } },
     { MODKEY|ShiftMask,    XK_d,                    spawn,          {.v = screenshotcmd } },
+    { MODKEY,              XK_o,                    spawn,          {.v = downvol } },
+    { MODKEY,              XK_p,                    spawn,          {.v = upvol } },
 	{ MODKEY|ShiftMask,    XK_h,                    rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,    XK_l,                    rotatestack,    {.i = -1 } },
 	{ MODKEY,              XK_j,                    focusstack,     {.i = +1 } },
@@ -132,8 +129,8 @@ static Key keys[] = {
 	{ MODKEY,              XK_l,                    setmfact,       {.f = +0.05} },
 	{ MODKEY,              XK_e,                    hidewin,        {0} },
 	{ MODKEY|ShiftMask,    XK_e,                    restorewin,     {0} },
-	{ MODKEY,              XK_o,                    hideotherwins,  {0}},
-	{ MODKEY|ShiftMask,    XK_o,                    restoreotherwins, {0}},
+	{ MODKEY,              XK_u,                    hideotherwins,  {0}},
+	{ MODKEY|ShiftMask,    XK_u,                    restoreotherwins, {0}},
 	{ MODKEY|ShiftMask,    XK_Return,               zoom,           {0} },
 	{ MODKEY,              XK_Tab,                  view,           {0} },
 	{ MODKEY|ShiftMask,    XK_q,                    killclient,     {0} },
