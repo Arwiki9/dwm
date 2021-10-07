@@ -99,6 +99,8 @@ static const char *suspendcmd[]  = { "/home/xrz/scripts/suspend.sh", NULL };
 
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 
+static const char *blurlockcmd[] = { "blurlock", NULL };
+
 static Key keys[] = {
 	/* modifier            key                      function        argument */
 	{ MODKEY,              XK_d,                    spawn,          {.v = dmenucmd } },
@@ -114,6 +116,7 @@ static Key keys[] = {
 	{ MODKEY,              XK_bracketright,         spawn,          {.v = upvol   } },
 	{ MODKEY,              XK_b,                    spawn,          {.v = wpcmd } },
     { MODKEY|ShiftMask,    XK_d,                    spawn,          {.v = screenshotcmd } },
+    { MODKEY|ShiftMask,    XK_b,                    spawn,          {.v = blurlockcmd } },
     { MODKEY,              XK_o,                    spawn,          {.v = downvol } },
     { MODKEY,              XK_p,                    spawn,          {.v = upvol } },
 	{ MODKEY|ShiftMask,    XK_h,                    rotatestack,    {.i = +1 } },
