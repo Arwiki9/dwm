@@ -18,8 +18,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const int user_bh            = 0;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=14" };
-static const char dmenufont[]       = "Monaco:size=14";
+static const char *fonts[]          = { "SauceCodePro:size=14" };
+static const char dmenufont[]       = "Monaco:size=13";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -86,16 +86,16 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]  = { "firefox", NULL };
 
-static const char *upvol[]   = { "/home/xrz/scripts/vol-up.sh",  NULL };
-static const char *downvol[] = { "/home/xrz/scripts/vol-down.sh",  NULL };
-static const char *mutevol[] = { "/home/xrz/scripts/vol-toggle.sh",  NULL };
+static const char *upvol[]   = { "/home/xrz/Desktop/scripts/vol-up.sh",  NULL };
+static const char *downvol[] = { "/home/xrz/Desktop/scripts/vol-down.sh",  NULL };
+static const char *mutevol[] = { "/home/xrz/Desktop/scripts/vol-toggle.sh",  NULL };
 
-static const char *wpcmd[]  = { "/home/xrz/scripts/wp-change.sh", NULL };
-static const char *sktogglecmd[]  = { "/home/xrz/scripts/sck-tog.sh", NULL };
+static const char *wpcmd[]  = { "/home/xrz/Desktop/scripts/wp-change.sh", NULL };
+static const char *sktogglecmd[]  = { "/home/xrz/Desktop/scripts/sck-tog.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 
-static const char *suspendcmd[]  = { "/home/xrz/scripts/suspend.sh", NULL };
+static const char *suspendcmd[]  = { "/home/xrz/Desktop/scripts/suspend.sh", NULL };
 
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 
